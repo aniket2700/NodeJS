@@ -87,34 +87,37 @@ app.use(bodyParser.urlencoded({extended: false}));
 
 app.get("/", function(req, res) {
     res.send(
-    `<form action="/insertAtFirst" method="post">
-        Value: <input type="text" name="data"><br>
-        <input type="submit" value="Insert"><br>
-        <a href = "/atLast">Insert At Last</a><br>
-        <a href = "/atIndex">Insert At Index</a><br>
+    `<h3>Insert At First</h3>
+    <form action="/insertAtFirst" method="post">
+        Value: <input type="text" name="data"><br><br>
+        <input type="submit" value="Insert"><br><br>
+        <a href = "/atLast">Insert At Last</a><br><br>
+        <a href = "/atIndex">Insert At Index</a><br><br>
         <a href = "/showList">Show List</a><br>
     </form>`)
 });
 
 app.get("/atLast", function(req,res) {
     res.send(
-        `<form action="/insertAtLast" method="post">
-            Value: <input type="text" name="data"><br>
-            <input type="submit" value="Insert"><br>
-            <a href = "/">Insert At First</a><br>
-            <a href = "/atIndex">Insert At Index</a><br>
+        `<h3>Insert At Last</h3>
+        <form action="/insertAtLast" method="post">
+            Value: <input type="text" name="data"><br><br>
+            <input type="submit" value="Insert"><br><br>
+            <a href = "/">Insert At First</a><br><br>
+            <a href = "/atIndex">Insert At Index</a><br><br>
             <a href = "/showList">Show List</a><br>
         </form>`)
 });
 
 app.get("/atIndex", function(req,res) {
     res.send(
-        `<form action="/insertAtIndex" method="post">
-            Value: <input type="text" name="data"><br>
-            Index: <input type="text" name="index"><br>
-            <input type="submit" value="Insert"><br>
-            <a href = "/">Insert At First</a><br>
-            <a href = "/atLast">Insert At Last</a><br>
+        `<h3>Insert At Index</h3>
+        <form action="/insertAtIndex" method="post">
+            Value: <input type="text" name="data"><br><br>
+            Index: <input type="text" name="index"><br><br>
+            <input type="submit" value="Insert"><br><br>
+            <a href = "/">Insert At First</a><br><br>
+            <a href = "/atLast">Insert At Last</a><br><br>
             <a href = "/showList">Show List</a><br>
         </form>`)
 });
